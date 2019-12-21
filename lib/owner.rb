@@ -57,4 +57,14 @@ class Owner
     self.cats
   end
   
+  def sell_pets
+    self.dogs.collect { |d| d.mood = "nervous"} 
+    self.cats.collect { |c| c.mood = "nervous"}
+    self.dogs.collect { |d| d.owner = nil} 
+    self.cats.collect { |c| c.owner = nil}
+    self.cats + self.dogs
+  end
+  
+  
+  
 end
